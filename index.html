@@ -418,6 +418,11 @@ target-densityDpi=device-dpi"/>
 	$(document).one().ready(function() {
 		console.log("Doc Ready")
 		Array =  JSON.parse(localStorage.getItem('textValues'));
+		if (typeof(Storage) !== "undefined") {
+  			console.log("yeetttt")// Code for localStorage/sessionStorage.
+		} else {
+  			console.log("yeet")// Sorry! No Web Storage support..
+		}
 	});
 	</script>
 
