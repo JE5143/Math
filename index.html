@@ -223,6 +223,7 @@ target-densityDpi=device-dpi"/>
   		for (var i = 0; i < length; i++)
     			text += possible.charAt(Math.floor(Math.random() * possible.length));
 		yeet = text;
+		localStorage.setItem('textValues', JSON.stringify(Array));
 		Array.push(text)
 		alert('Code ' + yeet)
 		return text;
