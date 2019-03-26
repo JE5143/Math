@@ -89,6 +89,7 @@ target-densityDpi=device-dpi"/>
 			yeet = text;
 			Array.push(text);
 			var myJSON = JSON.stringify(Array);
+			$.post("main.php", {data : myJSON}, function(){alert("File saved successfully")});
 			return text;
 		}
 		function passWord() {
