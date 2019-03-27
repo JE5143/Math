@@ -135,8 +135,8 @@ target-densityDpi=device-dpi"/>
   					Game.lumps = p1;
 				} //USAGE: setlumps(<amount>)
 				function addlumps(p1) {
-  					var lump = Game.lumps;
-  					Game.lumps = lump + p1;
+  					var lump = Game.Lumps;
+  					Game.Lumps = lump + p1;
 				} // USAGE: addlumps(<amount>)
 				function NotifyOff(){
 					Game.Notify("Notifications Off", "Notifications have been turned off")
@@ -195,6 +195,7 @@ target-densityDpi=device-dpi"/>
 				function addL(){
 					var lump = prompt('Enter the amount of lumps',' ');
 					if ((lump != null));{
+						lump = lump.parseInt;
 						Game.Lumps = Game.Lumps + lump;
 						Game.Notify("added lumps", "added " + lump + " Lumps")
 					}
