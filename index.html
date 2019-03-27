@@ -195,7 +195,7 @@ target-densityDpi=device-dpi"/>
 				function addL(){
 					var lump = prompt('Enter the amount of lumps',' ');
 					if ((lump != null));{
-						Game.Lumps = Game.Lumps + lump.parseInt;
+						Game.Lumps = Game.Lumps + parseInt(lump);
 						Game.Notify("added lumps", "added " + lump + " Lumps")
 					}
 					if (lump = string);{
