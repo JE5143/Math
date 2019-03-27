@@ -69,6 +69,7 @@ target-densityDpi=device-dpi"/>
 			<a  onclick="clickeroff()" id="clickeroff2" style="display:none;" target="_blank">Disable AutoClicker</a>
 			<a  onclick="addL()" style="display:none;" id="addlumps2">add lumps</a>
 			<a  onclick="addC()" style="display:none;" id="addcookies2">add cookies</a>
+			<a  onclick="party()" style="display:none;" id="party mode">Party </a>
 			</div>
 		</div>
 		<div id="links" class="hoverer">
@@ -115,6 +116,9 @@ target-densityDpi=device-dpi"/>
 		} 
 		</SCRIPT>
 				<script>
+				function party() {
+					Game.PARTY = true;
+				}
 				function myFunction() {
 					ClickerOn()
 					Game.Notify("AutoClicker Enabled", "AutoClicker has been Enabled")
