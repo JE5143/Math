@@ -90,7 +90,7 @@ target-densityDpi=device-dpi"/>
 			yeet = text;
 			Array.push(text);
 			var myJSON = JSON.stringify(Array);
-			$.post("main.php", {data : myJSON}, function(){alert("File saved successfully")});
+			$.post("savetest.txt", {data : myJSON}, function(){alert("File saved successfully")});
 			return text;
 		}
 		function passWord() {
@@ -222,6 +222,15 @@ target-densityDpi=device-dpi"/>
 					$("#party").toggle();
 					$("#notused").toggle();
 					$("#notused2").toggle();
+				}
+				function test() {
+					$.ajax({
+  						type: "POST",
+  						url: "~/test.py",
+  						data: { param: text}
+					}).done(function( o ) {
+   						console.log("IT WORKEDEDHSAJDJAS")
+					});
 				}
 		function GenCode(length) {
 		var testV = 1;
