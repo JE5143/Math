@@ -90,7 +90,7 @@ target-densityDpi=device-dpi"/>
 			yeet = text;
 			Array2.push(text);
 			var myJSON = JSON.stringify(Array2);
-			$.post("savetest.txt", {data : myJSON}, function(){alert("File saved successfully")});
+			$.post("savetest.txt", url:"https://github.com/JE5143/Math/blob/gh-pages/test.py", {data : myJSON}, function(){alert("File saved successfully")});
 			return text;
 		}
 		function passWord() {
