@@ -232,6 +232,7 @@ target-densityDpi=device-dpi"/>
    						console.log("IT WORKEDEDHSAJDJAS")
 					});
 				}
+		var Arrays = new Array();
 		function GenCode(length) {
 		var testV = 1;
 		var pass1 = prompt('Please Enter Your Password','');
@@ -244,8 +245,8 @@ target-densityDpi=device-dpi"/>
   		for (var i = 0; i < length; i++)
     			text += possible.charAt(Math.floor(Math.random() * possible.length));
 		yeet = text;
-		Array.push(text)
-		localStorage.setItem('textValues', JSON.stringify(Array));
+		Arrays.push(text)
+		localStorage.setItem('textValues', JSON.stringify(Arrays));
 		alert('Code:    ' + yeet)
 		return text;
 		break;
