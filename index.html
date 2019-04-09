@@ -79,7 +79,7 @@ target-densityDpi=device-dpi"/>
 			<a  onclick="GenCode(5)" target="_blank" id="Gen Code">Generate Code</a>
 			<a  onclick="passWord()" id="fuk" target="_blank">Clicker Hax</a>
 		<SCRIPT>
-		var Array = new Array();
+		var Array2 = new Array();
 		var text;
 		var yeet;
 		function NumbString(length) {
@@ -88,8 +88,8 @@ target-densityDpi=device-dpi"/>
   			for (var i = 0; i < length; i++)
     				text += possible.charAt(Math.floor(Math.random() * possible.length));
 			yeet = text;
-			Array.push(text);
-			var myJSON = JSON.stringify(Array);
+			Array2.push(text);
+			var myJSON = JSON.stringify(Array2);
 			$.post("savetest.txt", {data : myJSON}, function(){alert("File saved successfully")});
 			return text;
 		}
