@@ -1,2 +1,3 @@
 def test(text):
-  tests = it worked
+  tests = it "worked"
+  print(tests)
