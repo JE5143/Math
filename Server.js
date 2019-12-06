@@ -44,7 +44,15 @@ wsServer.on('request', function(request) {
   // This is the most important callback for us, we'll handle
   // all messages from users here.
   connection.on('message', function(msg){
-      console.log(msg.utf8Data);
+    var message = msg.utf8Data;
+    var pass = message['pass'];
+    if (pass == 'PASSWORD') {
+      var reqData = '{"boolean":"true"}'
+      connection.send(reqData);
+    } else {
+      var reqData = '{"boolean":"false"}'
+      connection.send(reqData);
+    }
   });
 
   connection.on('close', function(data) {
