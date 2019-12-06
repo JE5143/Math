@@ -1,0 +1,27 @@
+{
+    "name": "BWTourneyBot",
+    "version": "1.6.2",
+    "description": "Tourney Bot",
+    "author": "Github: OoDone",
+    "homepage": "",
+    "license": "",
+    "main": "bot.js",
+    "dependencies": {
+        "figlet": "latest",
+        "fs": "0.0.1-security",
+        "got": "^9.6.0",
+        "simple-git": "^1.126.0",
+        "ws": "latest"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "start": "npm install got@7.1.0 && node bot.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "bugs": {
+        "url": ""
+    }
+}
