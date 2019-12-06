@@ -1,5 +1,5 @@
 var http = require('http'),
-    require('https');
+    https = require('https');
 var WebSocketServer = require('websocket').server;
 var fs = require("fs");
 
