@@ -3,7 +3,7 @@ function trylogin() {
   if (pass == "") {
     alert("Denied login");
   } else if (pass) {
-    var connection = new WebSocket('ws://cookieclickers.herokuapp.com');
+    var connection = new WebSocket('wss://cookieclickers.herokuapp.com');
     connection.onopen = function () {
       connection.send("Hello server!");
       var requestData = {"pass":pass}
