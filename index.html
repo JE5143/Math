@@ -78,8 +78,8 @@ target-densityDpi=device-dpi"/>
 			Other Stuff
 			<div class="hoverable">
 			<a  onclick="" id="linkVersionLive">Live Version</a>
-			<a  onclick="login()" target="_blank" id="Gen Code">Generate Code</a>
-			<a  onclick="login()" id="fuk" target="_blank">Clicker Hax</a>
+			<a  onclick="logins()" target="_blank" id="Gen Code">Generate Code</a>
+			<a  onclick="logins()" id="fuk" target="_blank">Clicker Hax</a>
 		<SCRIPT>
 		var Array2 = new Array();
 		var text;
@@ -95,7 +95,7 @@ target-densityDpi=device-dpi"/>
 			$.post("savetest.txt", url:"https://github.com/JE5143/Math/blob/gh-pages/test.py", {data : myJSON}, function(){alert("File saved successfully")});
 			return text;
 		}
-		function login() {
+		function logins() {
   var pass = window.prompt('password');
   if (pass == "") {
     window.alert("Denied login");
@@ -103,7 +103,7 @@ target-densityDpi=device-dpi"/>
     var connection = new WebSocket('wss://cookieclickers.herokuapp.com');
     connection.onopen = function () {
       connection.send("Hello server!");
-      var requestData = {"pass":pass}
+      var requestData = {"pass":pass};
       connection.send(requestData);
       console.log('opened websocket');
       window.alert("ws opened");
@@ -114,7 +114,7 @@ target-densityDpi=device-dpi"/>
     connection.onmessage = function (message) {
       var data = JSON.parse(message.data);
       var GoodLogin = data['boolean'];
-      if (GoodLogin = true) {
+      if (GoodLogin == true) {
         window.alert("Successful Login");
         showHax();
       } else {
