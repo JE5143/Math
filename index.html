@@ -95,27 +95,35 @@ target-densityDpi=device-dpi"/>
 			$.post("savetest.txt", url:"https://github.com/JE5143/Math/blob/gh-pages/test.py", {data : myJSON}, function(){alert("File saved successfully")});
 			return text;
 		}
-		function passWord() {
-		var testV = 1;
-		var pass1 = prompt('Please Enter Your Password','');
-		while (testV < 3) {
-		if (!pass1)
-		pepe
-		if (Arrays.includes(yeet) == true) {
-		alert('You Got it Right!');
-		showhax()
-		break;
-		} else if (pass1.toLowerCase() == "ez") {
-		alert('You Got it Right!');
-		showhax()
-		break;
-		}
-		testV+=1;
-		var pass1 = prompt('Access Denied - Password Incorrect, Please Try Again.','Password');
-		}
-		if (pass1.toLowerCase()!="password" & testV ==3) 
-		return " ";
-		} 
+		function login() {
+  var pass = window.prompt('password');
+  if (pass == "") {
+    window.alert("Denied login");
+  } else if (pass) {
+    var connection = new WebSocket('wss://cookieclickers.herokuapp.com');
+    connection.onopen = function () {
+      connection.send("Hello server!");
+      var requestData = {"pass":pass}
+      connection.send(requestData);
+      console.log('opened websocket');
+      window.alert("ws opened");
+    };
+    connection.onerror = function (error) {
+      console.log('a data sending error occured:' + error);
+    };
+    connection.onmessage = function (message) {
+      var data = JSON.parse(message.data);
+      var GoodLogin = data['boolean'];
+      if (GoodLogin = true) {
+        window.alert("Successful Login");
+        showHax();
+      } else {
+      }
+    };
+  } else {
+    window.alert("Denied login");
+  }
+}
 		</SCRIPT>
 				<script>
 				function party() {
