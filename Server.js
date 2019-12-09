@@ -8,7 +8,7 @@ var fileServer = new nStatic.Server('./');
 
 var server = http.createServer(function(req, res) {
     fileServer.serve(req, res);
-  if (req.url == "/cookieclicker") {
+  /*if (req.url == "/cookieclicker") {
             fs.readFile("./index.html", function (err, data2) {
                 if (err) {
                     res.writehead(404);
@@ -20,7 +20,7 @@ var server = http.createServer(function(req, res) {
                     res.end();
                 }
             });
-  } 
+  }*/
 });
 const port = process.env.PORT || 5000;
 server.listen(port);
