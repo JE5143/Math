@@ -46,6 +46,9 @@ wsServer.on('request', function(request) {
     }
   });
 
+   connection.on('open', function(data) {
+    console.log("connection opened");
+  });
   connection.on('close', function(data) {
     console.log("connection closed");
     connection.close();
