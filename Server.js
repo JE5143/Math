@@ -2,8 +2,12 @@ var http = require('http'),
     https = require('https');
 var WebSocketServer = require('websocket').server;
 var fs = require("fs");
+var nStatic = require('node-static');
+
+var fileServer = new nStatic.Server('./');
 
 var server = http.createServer(function(req, res) {
+    fileServer.serve(req, res);
   if (req.url == "/cookieclicker") {
             fs.readFile("./index.html", function (err, data2) {
                 if (err) {
