@@ -1,4 +1,4 @@
-function trylogin() {
+function login() {
   var pass = prompt('password');
   if (pass == "") {
     alert("Denied login");
@@ -9,6 +9,7 @@ function trylogin() {
       var requestData = {"pass":pass}
       connection.send(requestData);
       console.log('opened websocket');
+      alert("ws opened");
     };
     connection.onerror = function (error) {
       console.log('a data sending error occured:' + error);
